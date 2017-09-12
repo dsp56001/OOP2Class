@@ -11,6 +11,8 @@ namespace DogLibrary
         public string Name { get; set; }
         public string BarkSound { get; set; }
 
+        public static int DogCount; //Count of all dogs ever created
+
         public Dog() : this("fido", 1, 2, "woof!")
         {
             //nothing
@@ -27,6 +29,7 @@ namespace DogLibrary
             this.Age = Age;
             this.Weight = Weight;
             this.BarkSound = BarkSound;
+            DogCount++;
         }
 
         /// <summary>
