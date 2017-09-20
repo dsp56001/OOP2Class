@@ -4,12 +4,22 @@ using System.Text;
 
 namespace DogLibrary
 {
-    public class Dog
+    public class Dog : Mammal
     {
-        public int Age { get;  private set; }
-        public int Weight { get; set; }
-        public string Name { get; set; }
-        public string BarkSound { get; set; }
+        
+        
+        
+        public string BarkSound
+        {
+            get
+            {
+                return this.Sound;
+            }
+            set
+            {
+                this.Sound = value;
+            }
+        }
 
         public static int DogCount; //Count of all dogs ever created
 
@@ -38,7 +48,7 @@ namespace DogLibrary
         /// <returns></returns>
         public string Bark()
         {
-            return this.BarkSound;
+            return this.MakeSound();
         }
 
         /// <summary>
@@ -48,18 +58,10 @@ namespace DogLibrary
         /// <returns></returns>
         public string Bark(int HowManyTimes)
         {
-            string barkstring = string.Empty;
-            for (int i = 0; i < HowManyTimes; i++)
-            {
-                barkstring += this.Bark() + " ";
-            }
-            return barkstring.Trim(); //trim cleans off any trailing spaces.
+            return base.MakeSound(HowManyTimes);
         }
 
-        public void HappyBithday()
-        {
-            this.Age++;
-        }
+        
 
         public string About()
         {

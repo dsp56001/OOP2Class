@@ -3,15 +3,25 @@ using DogLibrary;
 
 namespace UnitTestProjectDogTest
 {
+
+
     [TestClass]
     public class DogTests
     {
+
+        Dog dog;
+
+        public DogTests()
+        {
+            dog = new Dog();
+        }
+    
+
         [TestMethod]
         public void DogConstructor_DefaultValues()
         {
             //Arrange 
-            Dog d = new Dog();
-
+            Dog d = dog;
 
             //Act
 
@@ -23,31 +33,7 @@ namespace UnitTestProjectDogTest
             Assert.AreEqual(d.BarkSound, "woof!");
         }
 
-        [TestMethod]
-        public void DogConstructor_WithValues()
-        {
-            //Arrange 
-            string DFullName = "DFullName";
-            string DFullNameArf = "DFullNameArf";
-            string DName = "DName";
-            string DNameArf = "DNameArf";
-            Dog dFull = new Dog(DFullName, 99, 98, DFullNameArf);
-            Dog dName = new Dog(DName, 97, 96, DNameArf);
-
-            //Act
-            Assert.IsNotNull(dFull);
-
-            //Assert
-            Assert.AreEqual(dFull.Name, DFullName);
-            Assert.AreEqual(dFull.Weight, 98);
-            Assert.AreEqual(dFull.Age, 99);
-            Assert.AreEqual(dFull.BarkSound, DFullNameArf);
-
-            Assert.AreEqual(dName.Name, DName);
-            Assert.AreEqual(dName.Weight, 96);
-            Assert.AreEqual(dName.Age, 97);
-            Assert.AreEqual(dName.BarkSound, DNameArf);
-        }
+        
 
         [TestMethod]
         public void DogCount()
@@ -66,6 +52,43 @@ namespace UnitTestProjectDogTest
             //Assert
             Assert.AreEqual(InitialDogCount, CountAfterAddingDog - 1);
             Assert.AreEqual(InitialDogCount, AfterTenMOreDogs - 1 - 10);
+        }
+
+        [TestMethod]
+        public void DogBarkSingle()
+        {
+            //arrange
+            string barkSound;
+            string afterBark;
+
+            
+            //act
+            barkSound = dog.BarkSound;
+            afterBark = dog.Bark();
+           
+            //assert
+            Assert.AreEqual(barkSound, afterBark);
+            
+            Assert.AreNotEqual(afterBark, string.Empty);
+        }
+
+        [TestMethod]
+        public void DogBarkMultiple()
+        {
+            //arrange
+            dog = new Dog() { BarkSound = "nospace" };
+            string barkSound;
+            string afterBarks;
+            int numBarks;
+            string[] barks;
+            //act
+            numBarks = 5;
+            barkSound = dog.BarkSound;
+            afterBarks = dog.Bark(5);
+            barks = afterBarks.Split(' ');
+            //assert
+            Assert.AreEqual(barks.Length, numBarks);
+            Assert.AreNotEqual(afterBarks, string.Empty);
         }
 
         [TestMethod]
