@@ -82,9 +82,10 @@ namespace UnitTestProjectMammal
         {
             //arrange
             int age = TestDog.Age;
-            
+
             //act
-            TestDog.HappyBithday();
+            TestDog.HappyBirthday();
+            
             int AgePlusOne = age + 1;
 
             //assert
