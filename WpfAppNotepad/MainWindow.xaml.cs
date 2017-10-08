@@ -68,6 +68,7 @@ namespace WpfAppNotepad
                 SaveAsCommand_Executed(sender, e);
             }
             File.WriteAllText(FileName, txtEditor.Text);
+            //e.Handled = true;
         }
 
         private void SaveAsCommand_Executed(object sender, ExecutedRoutedEventArgs e)
