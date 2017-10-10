@@ -29,7 +29,7 @@ namespace WpfAppDog
 
         private void MammalViewControl_Loaded(object sender, RoutedEventArgs e)
         {
-            ViewModelMammal viewControl = new WpfAppDog.ViewModels.ViewModelMammal();
+            ViewModelMammals viewControl = new WpfAppDog.ViewModels.ViewModelMammals();
             viewControl.LoadMammals();
 
 

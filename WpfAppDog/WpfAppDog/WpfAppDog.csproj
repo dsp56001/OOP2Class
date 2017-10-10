@@ -54,7 +54,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="ViewModels\ViewModelMammal.cs" />
+    <Compile Include="ViewModels\ViewModelMammals.cs" />
     <Compile Include="Views\MammalListView.xaml.cs">
       <DependentUpon>MammalListView.xaml</DependentUpon>
     </Compile>
@@ -97,7 +97,7 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\WPFMammal.cs" />
+    <Compile Include="ViewModels\WPFMammal.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -115,6 +115,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="Models\ClassDiagramWpfDog.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

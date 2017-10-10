@@ -8,11 +8,11 @@ namespace UnitTestWpfDog
     public class ViewModelDogTests
     {
 
-        ViewModelMammal vmMammal;
+        ViewModelMammals vmMammal;
 
         public ViewModelDogTests()
         {
-            vmMammal = new ViewModelMammal();
+            vmMammal = new ViewModelMammals();
         }
 
         [TestMethod]

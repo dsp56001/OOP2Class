@@ -9,7 +9,7 @@ using WpfAppDog.Models;
 
 namespace WpfAppDog.ViewModels
 {
-    public class ViewModelMammal
+    public class ViewModelMammals
     {
 
         private static ObservableCollection<WPFMammal> mammals;
