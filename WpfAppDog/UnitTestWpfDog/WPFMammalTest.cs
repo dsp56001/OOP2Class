@@ -37,5 +37,18 @@ namespace UnitTestWpfDog
             Assert.AreEqual(Age + 1, AgeAfterHappyBirthday);
             Assert.AreEqual(receivedEvents[0], "Age");
         }
+
+        [TestMethod]
+        public void TestDependencyProperties()
+        {
+            //Arrange
+
+
+            //Act 
+            wpfMammal.Name = "test";
+
+
+            //Assert
+        }
     }
 }

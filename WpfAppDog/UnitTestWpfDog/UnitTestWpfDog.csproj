@@ -48,6 +48,7 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="UnitTest1.cs" />
     <Compile Include="ViewModelDogTests.cs" />
     <Compile Include="WPFMammalTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
