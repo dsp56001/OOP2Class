@@ -11,8 +11,7 @@
         <StackPanel>
             <views:MammalView x:Name="MammalView1" Loaded="MammalViewControl_Loaded"/>
             <StackPanel>            
-                <Button Name="btnAbout" Click="btnAbout_Click" >About</Button>
-                <TextBox Name="tbAbout" TextWrapping="Wrap" />
+                
             </StackPanel>
         </StackPanel>
     </Grid>

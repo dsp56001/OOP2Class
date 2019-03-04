@@ -18,6 +18,9 @@
             <Label Content="Weight:" />
             <TextBlock Text = "{Binding Path = Weight, Mode = OneWay}" 
                                     Margin = "0 5 3 5"/>
+            <Button Name="btnAbout" Click="btnAbout_Click" >About</Button>
+            <TextBox Name="tbAbout" TextWrapping="Wrap" Text = "{Binding Path = About, Mode = OneWay}" 
+                                    Margin = "0 5 3 5" />
         </StackPanel>
     </Grid>
 </UserControl>

@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -19,7 +20,7 @@ namespace WpfAppDog.Models
 
 
 
-        public WPFMammal (IMammal mammal)
+        public WPFMammal(IMammal mammal)
         {
             this.mammal = mammal;
             this.HappyBirthday = new WPFMammalCommand(ExecuteCommandHappyBirthday, CanExecuteCommandHappyBirthday);
@@ -36,7 +37,7 @@ namespace WpfAppDog.Models
             RaisePropertyChanged("Age");
         }
 
-        
+
 
         public int Age
         {
@@ -46,7 +47,7 @@ namespace WpfAppDog.Models
             }
 
 
-            
+
         }
 
         public string Name
@@ -60,7 +61,13 @@ namespace WpfAppDog.Models
                 if (Name != value)
                 {
                     mammal.Name = value;
-                    RaisePropertyChanged("Name");
+                    //OLD way
+                    //RaisePropertyChanged("Name");
+                    //New way PropertyName is optional
+                    RaisePropertyChanged();
+
+                    //Also update About?
+                    RaisePropertyChanged("About");
 
                 }
             }
@@ -72,21 +79,21 @@ namespace WpfAppDog.Models
             {
                 return mammal.Weight;
             }
-            
+
         }
 
-        public string About()
+        public string  About
         {
-            return mammal.About();
+            get { return mammal.About(); }
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
 
-        private void RaisePropertyChanged(string property)
+        private void RaisePropertyChanged([CallerMemberName] string propertyName = "")
         {
             if (PropertyChanged != null)
             {
-                PropertyChanged(this, new PropertyChangedEventArgs(property));
+                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
             }
         }
     }

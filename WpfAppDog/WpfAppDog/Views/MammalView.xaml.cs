@@ -25,6 +25,9 @@ namespace WpfAppDog.Views
             InitializeComponent();
         }
 
-        
+        private void btnAbout_Click(object sender, RoutedEventArgs e)
+        {
+            tbAbout.Text = ((WPFMammal)this.DataContext).About;
+        }
     }
 }
