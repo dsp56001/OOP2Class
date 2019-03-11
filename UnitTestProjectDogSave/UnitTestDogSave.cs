@@ -2,6 +2,9 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using ConsoleAppDogSave;
 using System.Collections.Generic;
+using System.Runtime.Serialization;
+using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
 
 namespace UnitTestProjectDogSave
 {
@@ -11,11 +14,52 @@ namespace UnitTestProjectDogSave
 
         WindowsDogRepo repo;
 
+        Dog d;
+        string Path;
+
         public UnitTestDogSave()
         {
             repo = new WindowsDogRepo();
+            d = new Dog();
+            Path = "testDog2.bin";
         }
-        
+
+        [TestMethod]
+        public void TestDog_Save()
+        {
+            //Arrange
+            IFormatter formatter = new BinaryFormatter();
+            Stream wStream, rStream;
+
+            Dog deserailizedDog;
+            //Act
+            using (wStream = new FileStream(Path,
+                                     FileMode.Create,
+                                     FileAccess.Write, FileShare.None))
+            {
+                formatter.Serialize(wStream, d);
+            }
+            
+            using (rStream = new FileStream(Path,
+                                      FileMode.Open,
+                                      FileAccess.Read,
+                                      FileShare.Read))
+            {
+
+                deserailizedDog = (Dog)formatter.Deserialize(rStream);
+            }
+            //Assert
+            Assert.AreEqual(deserailizedDog, d);
+            
+
+
+        }
+
+        [TestCleanup]
+        public void CleanupTest()
+        {
+            System.IO.File.Delete(Path);
+        }
 
         [TestMethod]
         public void TestDogCollectionSaving_DefaultPath()
