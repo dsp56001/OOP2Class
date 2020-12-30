@@ -33,8 +33,22 @@ namespace ConsoleAppEventsDelegates
             dog.Name = "Fido";
             dog.Name = "roover";
 
+            DogDelagate dd = new DogDelagate();
+            //dd.Bark(5);
+            
+            dd.BarkAsync(BarkedMethod);
+
+            Console.WriteLine("Done!!! Press any Key to exit.");
+
             Console.ReadKey();
 
+        }
+
+        // Create a method for a delegate.
+        public static string BarkedMethod(string message)
+        {
+            Console.WriteLine(message);
+            return message;
         }
 
         // Create a method for a delegate.

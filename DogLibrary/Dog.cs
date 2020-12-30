@@ -44,7 +44,7 @@ namespace DogLibrary
         /// Make the dog bark
         /// </summary>
         /// <returns></returns>
-        public string Bark()
+        public virtual string Bark()
         {
             return this.BarkSound;
         }
@@ -54,7 +54,7 @@ namespace DogLibrary
         /// </summary>
         /// <param name="HowManyTimes">How many times to bak the dog</param>
         /// <returns></returns>
-        public string Bark(int HowManyTimes)
+        public virtual string Bark(int HowManyTimes)
         {
             string barkstring = string.Empty;
             for (int i = 0; i < HowManyTimes; i++)
