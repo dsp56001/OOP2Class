@@ -4,7 +4,7 @@ using DogLibrary;
 namespace UnitTestMammal
 {
     [TestClass]
-    class CatTests
+    public class CatTests
     {
         Cat TestCat;
 
@@ -21,7 +21,7 @@ namespace UnitTestMammal
 
 
             //act
-            TestCat.HappyBithday();
+            TestCat.HappyBirthday();
             int AgePlusOne = age + 1;
 
             //assert
@@ -33,10 +33,10 @@ namespace UnitTestMammal
         {
             //arrange
             string meowNoSpaces = "meowNOSpaces";
-            string testMeow = string.Emptymeow;
+            string testMeow = string.Empty;
             Cat cTestBark = new Cat() { MeowSound = meowNoSpaces };
             //act
-            testMeow = dTestBark.Meow();
+            testMeow = cTestBark.Meow();
 
             //assert
             Assert.AreEqual(testMeow, meowNoSpaces);
@@ -47,16 +47,16 @@ namespace UnitTestMammal
         {
             //arrange
             string meowNoSpaces = "meowNOSpaces";
-            string testMeow = string.Emptymeow;
+            string testMeow = string.Empty;
             int meowtimes = 3;  //shouldn't matter how many times it barks
-            Dog dTestBark = new Dog() { BarkSound = meowNoSpaces };
+            Cat cTestMeow = new Cat() { MeowSound = meowNoSpaces };
             string[] meowAry;
             //act
-            testMeow = dTestBark.Meow(meowtimes);
-            testMeow = testMeow.Split(' ');
+            testMeow = cTestMeow.Meow(meowtimes);
+            meowAry = testMeow.Split(' ');
 
             //assert
-            Assert.AreEqual(testMeow.Length, barkmeowtimestimes);
+            Assert.AreEqual(testMeow.Length, meowtimes);
         }
 
 

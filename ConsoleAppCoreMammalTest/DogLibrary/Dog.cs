@@ -56,7 +56,7 @@ namespace DogLibrary
             return barkstring.Trim(); //trim cleans off any trailing spaces.
         }
 
-        public void HappyBithday()
+        public void HappyBirthday()
         {
             this.Age++;
         }

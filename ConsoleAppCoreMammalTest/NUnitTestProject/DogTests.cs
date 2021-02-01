@@ -1,37 +1,26 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 using DogLibrary;
 
-namespace UnitTestMammal
+namespace NUnitTestProject
 {
-    [TestClass]
     public class DogTests
     {
+
         Dog TestDog;
 
-        public DogTests()
+        [SetUp]
+        public void Setup()
         {
             TestDog = new Dog();
         }
 
-
-        [TestMethod]
-        public void DogConstructor_DefaultValues()
+        [Test]
+        public void Test1()
         {
-            //Arrange 
-            Dog d = new Dog();
-
-
-            //Act
-
-            //Assert
-            Assert.IsNotNull(d);
-            Assert.AreEqual(d.Name, "fido");
-            Assert.AreEqual(d.Weight, 2);
-            Assert.AreEqual(d.Age, 1);
-            Assert.AreEqual(d.BarkSound, "woof!");
+            Assert.Pass();
         }
 
-        [TestMethod]
+        [Test]
         public void DogConstructor_WithValues()
         {
             //Arrange 
@@ -47,6 +36,7 @@ namespace UnitTestMammal
 
             //Assert
             Assert.AreEqual(dFull.Name, DFullName);
+            Assert.That(dFull.Name, Is.EqualTo( DFullName));
             Assert.AreEqual(dFull.Weight, 98);
             Assert.AreEqual(dFull.Age, 99);
             Assert.AreEqual(dFull.BarkSound, DFullNameArf);
@@ -57,7 +47,7 @@ namespace UnitTestMammal
             Assert.AreEqual(dName.BarkSound, DNameArf);
         }
 
-        [TestMethod]
+        [Test]
         public void DogCount()
         {
             //Arrange 
@@ -72,26 +62,12 @@ namespace UnitTestMammal
             }
             int AfterTenMOreDogs = Dog.DogCount;
             //Assert
+            Assert.That(InitialDogCount, Is.EqualTo(CountAfterAddingDog - 1));
             Assert.AreEqual(InitialDogCount, CountAfterAddingDog - 1);
             Assert.AreEqual(InitialDogCount, AfterTenMOreDogs - 1 - 10);
         }
 
-        [TestMethod]
-        public void DogAge()
-        {
-            //arrange
-            int age = TestDog.Age;
-            
-
-            //act
-            TestDog.HappyBirthday();
-            int AgePlusOne = age + 1;
-
-            //assert
-            Assert.AreEqual(age + 1, AgePlusOne);
-        }
-
-        [TestMethod]
+        [Test]
         public void DogBarkSingle()
         {
             //arrange
@@ -105,21 +81,22 @@ namespace UnitTestMammal
             Assert.AreEqual(testBark, barkNoSapces);
         }
 
-        [TestMethod]
-        public void DogBarkMultiple()
+        [Test]
+        [TestCase(3)]
+        public void DogBarkMultiple(int numBarks)
         {
             //arrange
             string barkNoSapces = "BarkNOSpaces";
             string testBark = string.Empty;
-            int barktimes = 3;  //shouldn't matter how many times it barks
+            int barktimes = numBarks;  //shouldn't matter how many times it barks
             Dog dTestBark = new Dog() { BarkSound = barkNoSapces };
             string[] barkAry;
             //act
             testBark = dTestBark.Bark(barktimes);
-            barkAry = testBark.Split(' ');
+            barkAry = testBark.Split(barkNoSapces, System.StringSplitOptions.None);
 
             //assert
-            Assert.AreEqual(barkAry.Length, barktimes);
+            Assert.AreEqual(barkAry.Length - 1, barktimes);
         }
     }
 }

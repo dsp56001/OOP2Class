@@ -121,6 +121,7 @@ namespace UnitTestProjectMammal
 
             //assert
             Assert.AreEqual(barkAry.Length -1, barktimes);
+            
         }
     }
 }

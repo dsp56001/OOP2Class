@@ -1,13 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26730.3
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30717.126
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleAppCoreMammalTest", "ConsoleAppCoreMammalTest\ConsoleAppCoreMammalTest.csproj", "{0E143DC6-BC23-488E-958B-30CF24AF4278}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleAppCoreMammalTest", "ConsoleAppCoreMammalTest\ConsoleAppCoreMammalTest.csproj", "{0E143DC6-BC23-488E-958B-30CF24AF4278}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DogLibrary", "DogLibrary\DogLibrary.csproj", "{280C5EF7-28B5-4732-B6DD-0418D5FF012B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestProjectMammal", "UnitTestProjectMammal\UnitTestProjectMammal.csproj", "{FD3915CB-B91F-4711-9BF2-C25822B1ED22}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTestProjectMammal", "UnitTestProjectMammal\UnitTestProjectMammal.csproj", "{FD3915CB-B91F-4711-9BF2-C25822B1ED22}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NUnitTestProject", "NUnitTestProject\NUnitTestProject.csproj", "{20EC93C2-2760-471E-8E5A-3C9A892F59B2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{FD3915CB-B91F-4711-9BF2-C25822B1ED22}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FD3915CB-B91F-4711-9BF2-C25822B1ED22}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FD3915CB-B91F-4711-9BF2-C25822B1ED22}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20EC93C2-2760-471E-8E5A-3C9A892F59B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20EC93C2-2760-471E-8E5A-3C9A892F59B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20EC93C2-2760-471E-8E5A-3C9A892F59B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20EC93C2-2760-471E-8E5A-3C9A892F59B2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

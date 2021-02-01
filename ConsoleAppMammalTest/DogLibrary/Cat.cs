@@ -7,17 +7,23 @@ namespace DogLibrary
 {
     public class Cat : Mammal
     {
-        public int MeowSound
+        public string MeowSound
         {
-            get => default(int);
+            get => default(string);
             set
             {
             }
         }
 
-        public void Meow()
+        public string Meow()
         {
-            throw new System.NotImplementedException();
+            return this.MeowSound;
         }
+
+        public string Meow(int HowManyTimes)
+        {
+            return this.MeowSound;
+        }
+
     }
 }

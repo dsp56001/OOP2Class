@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26730.3
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30717.126
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleAppMammalTest", "ConsoleAppMammalTest\ConsoleAppMammalTest.csproj", "{93AF08AA-8EBB-44A0-B4EE-DEEF5291F0FD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestMammal", "UnitTestMammal\UnitTestMammal.csproj", "{5BFDCD2E-62B5-4313-AA26-7FD52440AF40}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSUnitTestMammal", "UnitTestMammal\MSUnitTestMammal.csproj", "{5BFDCD2E-62B5-4313-AA26-7FD52440AF40}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DogLibrary", "DogLibrary\DogLibrary.csproj", "{7F148D3F-EE72-49E8-B33E-56B40F33D1B0}"
 EndProject
