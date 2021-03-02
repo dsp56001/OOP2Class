@@ -39,8 +39,7 @@ namespace ConsoleAppEventsDelegates
 
         private void loadSoundAsync()
         {
-            // Note: You may need to change the location specified based on
-            // the location of the sound to be played.
+            //When the player is ready load the sound
             this.player.SoundLocation = @".\assets\bark.wav";
             this.player.LoadAsync();
         }

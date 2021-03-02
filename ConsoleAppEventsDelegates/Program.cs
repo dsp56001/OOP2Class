@@ -11,7 +11,6 @@ namespace ConsoleAppEventsDelegates
     {
         public delegate void Log(string message);
 
-
         static void Main(string[] args)
         {
             // Instantiate the delegate.
@@ -23,8 +22,11 @@ namespace ConsoleAppEventsDelegates
             handler("Hello World");
             anotherHandler("Hello Again!");
 
+            //We will discuss proper logging later in the class
+
             DogEvent dog = new DogEvent();
 
+            //Add logging to property changed
             dog.PropertyChanged += delegate (object sender, PropertyChangedEventArgs e)
             {
                 handler(e.PropertyName);

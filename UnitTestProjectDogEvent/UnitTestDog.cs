@@ -19,7 +19,7 @@ namespace UnitTestProjectDogEvent
 
 
         [TestMethod]
-        public void TestMethod1()
+        public void DogINotifyPropertyChanged()
         {
             //Arrange
             List<string> receivedEvents = new List<string>();
@@ -38,5 +38,7 @@ namespace UnitTestProjectDogEvent
             Assert.AreEqual("BarkSound", receivedEvents[1]);
             
         }
+
+
     }
 }
