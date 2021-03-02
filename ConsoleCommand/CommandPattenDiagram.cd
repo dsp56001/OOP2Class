@@ -6,12 +6,13 @@
       <HashCode>AAEAAAAAAAAAAAEAAAAAAAAAAAAAAAAIQAAAAAAAYAA=</HashCode>
       <FileName>GameComponent.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
   <Class Name="ConsoleCommand.Command">
     <Position X="9.25" Y="0.5" Width="3" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAQAAAAAQAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Command.cs</FileName>
+      <FileName>CommandPattern\Command.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
@@ -51,10 +52,10 @@
     </TypeIdentifier>
   </Class>
   <Interface Name="ConsoleCommand.ICommand">
-    <Position X="3.75" Y="0.5" Width="2.5" />
+    <Position X="6.5" Y="0.5" Width="2.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>ICommand.cs</FileName>
+      <FileName>CommandPattern\ICommand.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Font Name="Segoe UI" Size="9" />

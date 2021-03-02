@@ -9,12 +9,13 @@ namespace ConsoleCommand.Commands
     {
         public MoveDownCommand()
         {
-            this.CommandName = "Move Up";
+            this.CommandName = "Move Down";
         }
 
         public override void Execute(GameComponent gc)
         {
-            gc.MoveDown();
+            if (gc is IMoveable)
+                gc.MoveDown();
             base.Execute(gc);
         }
     }

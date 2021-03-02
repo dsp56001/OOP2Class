@@ -11,7 +11,7 @@ namespace DogLibrary
         {
             get
             {
-                return this.Sound;  //same as mammal sound
+                throw new Exception();
             }
 
             set
@@ -24,18 +24,14 @@ namespace DogLibrary
         public static int DogCount; //Count of all dogs ever created
 
 
-        public Dog() : this("fido", 1, 2, "woof!")
+        public Dog() : this("fido", 1, 2, "woof")
         {
 
         }
 
         public Dog(string Name, int Age, int Weight, string BarkSound)
         {
-            this.Age = Age;
-            this.Weight = Weight;
-            this.BarkSound = BarkSound;
-            this.Name = Name;
-            DogCount++;
+            
         }
 
         
@@ -46,7 +42,7 @@ namespace DogLibrary
         /// <returns></returns>
         public string Bark()
         {
-            return this.BarkSound;
+            return string.Empty;
         }
 
         /// <summary>
@@ -56,12 +52,7 @@ namespace DogLibrary
         /// <returns></returns>
         public string Bark(int HowManyTimes)
         {
-            string barkstring = string.Empty;
-            for (int i = 0; i < HowManyTimes; i++)
-            {
-                barkstring += this.Bark() + " ";
-            }
-            return barkstring.Trim(); //trim cleans off any trailing spaces.
+            return this.BarkSound;
         }
 
         

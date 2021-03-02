@@ -31,11 +31,12 @@ namespace UnitTestProjectDogEvent
             //Act
             dog.Name = "something";
             dog.BarkSound = "something";
+            
 
             //Assert
             Assert.AreEqual("Name", receivedEvents[0]);
             Assert.AreEqual("BarkSound", receivedEvents[1]);
-            Assert.IsInstanceOfType(dog.PropertyChanged , typeof(PropertyChangedEventHandler));
+            
         }
     }
 }

@@ -20,8 +20,6 @@ namespace WpfAppNotepad
     public partial class MainWindow : Window
     {
 
-
-
         protected string fileName;
         public string FileName
         {
@@ -51,7 +49,7 @@ namespace WpfAppNotepad
 
         private void NewCommand_Executed(object sender, ExecutedRoutedEventArgs e)
         {
-            FileName = txtEditor.Text = string.Empty;
+            FileName = txtEditor.Text = "Untitled";
         }
 
         private void SaveCommand_CanExecute(object sender, CanExecuteRoutedEventArgs e)
@@ -67,6 +65,7 @@ namespace WpfAppNotepad
             {
                 SaveAsCommand_Executed(sender, e);
             }
+
             File.WriteAllText(FileName, txtEditor.Text);
             //e.Handled = true;
         }

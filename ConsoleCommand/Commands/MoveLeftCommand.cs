@@ -15,7 +15,8 @@ namespace ConsoleCommand.Commands
 
         public override void Execute(GameComponent gc)
         {
-            gc.MoveLeft();
+            if (gc is IMoveable)
+                gc.MoveLeft();
             base.Execute(gc);
         }
     }
