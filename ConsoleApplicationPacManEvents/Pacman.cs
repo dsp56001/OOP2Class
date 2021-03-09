@@ -39,13 +39,13 @@ namespace ConsoleApplicationObserver
 
     public class PacManEventArgs : EventArgs
     {
-
+        public PacState State { get; }
 
         public PacManEventArgs(PacState state)
         {
             this.State = state;
         }
 
-        public PacState State { get; }
+        
     }
 }

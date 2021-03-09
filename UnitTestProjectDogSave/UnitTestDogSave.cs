@@ -12,15 +12,15 @@ namespace UnitTestProjectDogSave
     public class UnitTestDogSave
     {
 
-        WindowsDogRepo repo;
 
         Dog d;
         string Path;
 
         public UnitTestDogSave()
         {
-            repo = new WindowsDogRepo();
+            
             d = new Dog();
+            
             Path = "testDog2.bin";
         }
 
@@ -50,9 +50,6 @@ namespace UnitTestProjectDogSave
             }
             //Assert
             Assert.AreEqual(deserailizedDog, d);
-            
-
-
         }
 
         [TestCleanup]
@@ -61,10 +58,12 @@ namespace UnitTestProjectDogSave
             System.IO.File.Delete(Path);
         }
 
+
         [TestMethod]
         public void TestDogCollectionSaving_DefaultPath()
         {
             //Arrange
+            WindowsDogRepo repo = new WindowsDogRepo();
             string realPath;
             string defaultPath; 
 
@@ -74,6 +73,7 @@ namespace UnitTestProjectDogSave
 
             //Assert
             Assert.AreEqual(defaultPath, realPath);
+            
         }
 
         [TestMethod]
@@ -81,7 +81,8 @@ namespace UnitTestProjectDogSave
         {
             //Arrange
             List<Dog> loadedDogs;
-
+            WindowsDogRepo repo = new WindowsDogRepo();
+            
             //Act
             repo.Save();
             loadedDogs = (List<Dog>)repo.Load();
@@ -94,5 +95,23 @@ namespace UnitTestProjectDogSave
                 CollectionAssert.AreEqual(repo.Dogs, loadedDogs);
             }
         }
+
+        [TestMethod]
+        public void TestDogRepoGetXM()
+        {
+            //Arrange
+            DogRepo repo = new DogRepo();
+            List<Dog> dogs = repo.Dogs;
+            string defaultXML = Serializer.XmlSerialize<List<Dog>>(dogs);
+            string repoXML;
+            
+            //Act
+            repoXML = repo.GetXML();
+            //Assert
+            Assert.AreEqual(defaultXML, repoXML);
+        }
+
+
+
     }
 }

@@ -17,6 +17,7 @@ namespace ConsoleAppDogSave
         public WindowsDogRepo()
         {
             Path = "MyFile.bin";
+            
         }
 
         public bool Save()

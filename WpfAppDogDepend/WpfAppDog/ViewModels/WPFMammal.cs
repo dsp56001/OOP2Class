@@ -13,7 +13,7 @@ namespace WpfAppDog.Models
 {
     public class WPFMammal : DependencyObject, INotifyPropertyChanged
     {
-        IMammal mammal;
+        IMammal mammal; //conatining base object POCO
 
 
         public ICommand HappyBirthday { get; set; }
@@ -28,7 +28,7 @@ namespace WpfAppDog.Models
 
         private bool CanExecuteCommandHappyBirthday(object parameter)
         {
-            return true;
+            return true ;
         }
 
         private void ExecuteCommandHappyBirthday(object parameter)

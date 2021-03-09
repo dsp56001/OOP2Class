@@ -28,6 +28,8 @@ namespace WpfAppDog.ViewModels
                 {
                     new WPFMammal ( new Dog{ BarkSound="woof!", Name="fido"}),
                     new WPFMammal ( new Dog{ BarkSound="arf!", Name="rover"}),
+                    new WPFMammal ( new Dog{ BarkSound="arf!", Name="rover"}),
+                    new WPFMammal ( new Dog{ BarkSound="arf!", Name="rover"})
                 };
             }
 
