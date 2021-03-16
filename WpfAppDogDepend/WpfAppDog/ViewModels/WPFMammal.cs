@@ -11,7 +11,7 @@ using System.Windows.Input;
 
 namespace WpfAppDog.Models
 {
-    public class WPFMammal : DependencyObject, INotifyPropertyChanged
+    public class WPFMammal : BaseViewModel
     {
         IMammal mammal; //conatining base object POCO
 
@@ -34,7 +34,7 @@ namespace WpfAppDog.Models
         private void ExecuteCommandHappyBirthday(object parameter)
         {
             this.mammal.HappyBirthday();
-            RaisePropertyChanged("Age");
+            RaisePropertyChangedEvent("Age");
         }
 
 
@@ -64,7 +64,7 @@ namespace WpfAppDog.Models
                     //OLD way
                     //RaisePropertyChanged("Name");
                     //New way PropertyName is optional
-                    RaisePropertyChanged();
+                    RaisePropertyChangedEvent("Name") ;
 
                     
                 }
@@ -85,15 +85,7 @@ namespace WpfAppDog.Models
             get { return mammal.About(); }
         }
 
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        private void RaisePropertyChanged([CallerMemberName] string propertyName = "")
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-            }
-        }
+        
     }
 
     public class WPFMammalCommand : ICommand

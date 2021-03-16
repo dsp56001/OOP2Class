@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
 
-namespace WpfAppCurrency.ViewModels
+namespace WpfAppDog
 {
     public abstract class BaseViewModel : DependencyObject, INotifyPropertyChanged
     {

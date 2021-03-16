@@ -49,6 +49,9 @@
                     </ToolBar>
                 </ToolBarTray>
             </Menu>
+            <StackPanel DockPanel.Dock="Left">
+                <Label>Test</Label>
+            </StackPanel>
             <StatusBar DockPanel.Dock="Bottom" Height="25">
                 <StatusBarItem>
                     <TextBlock Name="lblCursorPosition" />
@@ -56,5 +59,6 @@
             </StatusBar>
             <TextBox AcceptsReturn="True" Name="txtEditor" SelectionChanged="txtEditor_SelectionChanged" />
         </DockPanel>
+        
     </Grid>
 </Window>
