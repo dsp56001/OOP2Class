@@ -1,4 +1,4 @@
-# OOP2 Class Repo
+# Programming 3 Class Repo
 
 In class samples and course work
 
