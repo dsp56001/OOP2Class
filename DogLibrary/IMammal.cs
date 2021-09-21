@@ -13,7 +13,7 @@ namespace DogLibrary
         int Weight { get; }
 
         string MakeSound();
-        void HappyBirthday();
+        int HappyBirthday();
 
         void Eat();
     }

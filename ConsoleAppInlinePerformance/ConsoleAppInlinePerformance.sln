@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31205.134
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleAppInlinePerformance", "ConsoleAppInlinePerformance\ConsoleAppInlinePerformance.csproj", "{CA391FED-3085-4467-BDC2-573E022A1BAB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleAppDotNet", "ConsoleAppDotNet\ConsoleAppDotNet.csproj", "{CE60A8EE-05DF-4A01-94A0-82757F3A4B33}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CA391FED-3085-4467-BDC2-573E022A1BAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA391FED-3085-4467-BDC2-573E022A1BAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA391FED-3085-4467-BDC2-573E022A1BAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA391FED-3085-4467-BDC2-573E022A1BAB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE60A8EE-05DF-4A01-94A0-82757F3A4B33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE60A8EE-05DF-4A01-94A0-82757F3A4B33}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE60A8EE-05DF-4A01-94A0-82757F3A4B33}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE60A8EE-05DF-4A01-94A0-82757F3A4B33}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {45B61202-C1BB-4FE1-91CD-A617B9D4166B}
+	EndGlobalSection
+EndGlobal

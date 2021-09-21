@@ -54,9 +54,9 @@ namespace DogLibrary
             return this.Sound;
         }
 
-        public virtual void HappyBirthday()
+        public virtual int HappyBirthday()
         {
-            this.Age++;
+            return this.Age++;
         }
 
         public void Eat()
