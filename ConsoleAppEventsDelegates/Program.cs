@@ -24,18 +24,18 @@ namespace ConsoleAppEventsDelegates
 
             //We will discuss proper logging later in the class
 
-            DogEvent dog = new DogEvent();
-
+            DogEvent edog = new DogEvent();
+            edog.BarkCompleted += Edog_BarkCompleted;
             //Add logging to property changed
-            dog.PropertyChanged += delegate (object sender, PropertyChangedEventArgs e)
+            edog.PropertyChanged += delegate (object sender, PropertyChangedEventArgs e)
             {
                 handler(e.PropertyName);
             };
 
-            dog.Name = "Fido";
-            dog.Name = "roover";
+            edog.Name = "Fido";
+            edog.Name = "roover";
 
-            DogDelagate dd = new DogDelagate();
+            DogSoundDelagate dd = new DogSoundDelagate();
             //dd.Bark(5);
             
             dd.BarkAsync(BarkedMethod);
@@ -44,6 +44,11 @@ namespace ConsoleAppEventsDelegates
 
             Console.ReadKey();
 
+        }
+
+        private static void Edog_BarkCompleted()
+        {
+            throw new NotImplementedException();
         }
 
         // Create a method for a delegate.

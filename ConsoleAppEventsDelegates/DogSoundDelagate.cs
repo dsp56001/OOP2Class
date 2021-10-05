@@ -8,11 +8,11 @@ using DogLibrary;
 
 namespace ConsoleAppEventsDelegates
 {
-    class DogDelagate : Dog
+    class DogSoundDelagate : Dog
     {
         SoundPlayer player;
         
-        public DogDelagate()
+        public DogSoundDelagate()
         {
             player = new SoundPlayer(@".\assets\bark.wav");
             player.LoadCompleted += this.Player_LoadCompleted;

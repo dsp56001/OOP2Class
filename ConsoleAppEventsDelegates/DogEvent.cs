@@ -5,14 +5,37 @@ using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel;
 using System.Windows;
+using DogLibrary;
 
 namespace ConsoleAppEventsDelegates
 {
-    public class DogEvent :  INotifyPropertyChanged
+    public class DogEvent :   INotifyPropertyChanged
     {
         
         protected string name;
         protected string barkSound;
+
+        public EventHandler BarkComplete;
+        public delegate void Barked();  // delegate
+
+        public event Barked BarkCompleted; // event
+
+        public DogEvent()
+        {
+            
+        }
+
+        protected virtual void OnBarked(EventArgs e)
+        {
+            BarkComplete?.Invoke(this, e);
+            BarkCompleted.Invoke();
+        }
+
+        public virtual string Bark()
+        {
+            BarkComplete?.Invoke(this, EventArgs.Empty);
+            return this.BarkSound;
+        }
 
         public string Name
         {
@@ -58,4 +81,11 @@ namespace ConsoleAppEventsDelegates
             }
         }
     }
+
+    class DogEventArgs : EventArgs
+    {
+        public int NumBarks { get; set; }
+        public DateTime CompletionTime { get; set; }
+    }
+
 }
