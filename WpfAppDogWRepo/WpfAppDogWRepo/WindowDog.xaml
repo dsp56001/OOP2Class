@@ -1,0 +1,31 @@
+﻿<Window x:Class="WpfAppDogWRepo.WindowDog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfAppDogWRepo"
+        mc:Ignorable="d"
+        Title="WindowDog" Height="450" Width="800">
+    <Grid>
+        <StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label x:Name="lblName">Name</Label>
+                <Separator Width="10"></Separator>
+                <TextBlock x:Name="tbName" VerticalAlignment="Center" >Name</TextBlock>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label x:Name="lblAge">Age</Label>
+                <Separator Width="10"></Separator>
+                <TextBlock x:Name="tbAge" VerticalAlignment="Center" >Age</TextBlock>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label x:Name="lblWeight">Weight</Label>
+                <Separator Width="10"></Separator>
+                <TextBlock x:Name="tbWeight" VerticalAlignment="Center" >Weight</TextBlock>
+            </StackPanel>
+            
+            <Button x:Name="btnDogSave">Save</Button>
+            <TextBlock x:Name="tbAbout">About()</TextBlock>
+        </StackPanel>
+    </Grid>
+</Window>

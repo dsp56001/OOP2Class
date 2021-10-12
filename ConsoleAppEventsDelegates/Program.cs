@@ -14,13 +14,21 @@ namespace ConsoleAppEventsDelegates
         static void Main(string[] args)
         {
             // Instantiate the delegate.
-            Log handler = LogToConsole;
+            Log LogHandler = LogToConsole;
 
-            Log anotherHandler = LogToConsole;
+            Log AnotherLogHandler = LogToConsole;
+
+            Log RedLogHandler = LogToConsoleRed;
 
             // Call the delegate.
-            handler("Hello World");
-            anotherHandler("Hello Again!");
+            LogHandler("Hello World");
+            AnotherLogHandler("Hello Again!");
+            RedLogHandler("Red Hello Again!");
+
+            //Two delegates oh my
+            Log multiLogHandler = AnotherLogHandler + RedLogHandler;
+
+            multiLogHandler("One message two handlers!!!");
 
             //We will discuss proper logging later in the class
 
@@ -29,7 +37,7 @@ namespace ConsoleAppEventsDelegates
             //Add logging to property changed
             edog.PropertyChanged += delegate (object sender, PropertyChangedEventArgs e)
             {
-                handler(e.PropertyName);
+                LogHandler(e.PropertyName);
             };
 
             edog.Name = "Fido";
@@ -64,6 +72,15 @@ namespace ConsoleAppEventsDelegates
             System.Console.WriteLine(message);
         }
 
+
+        // Create a method for a delegate.
+        public static void LogToConsoleRed(string message)
+        {
+            ConsoleColor origColor = System.Console.ForegroundColor;
+            System.Console.ForegroundColor = ConsoleColor.Red;
+            System.Console.WriteLine(message);
+            System.Console.ForegroundColor = origColor;
+        }
 
     }
 }
