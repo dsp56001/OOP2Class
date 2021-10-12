@@ -14,12 +14,12 @@ namespace DogLibraryCore
             Mammals = new List<IMammal>();
         }
 
-        public virtual void AddMammal(IMammal mammal)
+        public virtual void Add(IMammal mammal)
         {
             this.Mammals.Add(mammal);
         }
 
-        public virtual void RemoveMammal(IMammal mammal)
+        public virtual void Remove(IMammal mammal)
         {
             this.Mammals.Remove(mammal);
         }
