@@ -7,8 +7,6 @@ namespace DogLibrary
 {
     public abstract class Mammal : IMammal
     {
-
-        
         public int Age
         {
             get;
@@ -47,8 +45,6 @@ namespace DogLibrary
             this.Name = Name;
         }
         
-        
-
         public virtual string MakeSound()
         {
             return this.Sound;
