@@ -31,7 +31,7 @@ namespace DogLibraryCore.Repo
             return this._repo;
         }
 
-        void Remove(IMammal entity)
+        public void Remove(IMammal entity)
         {
             this._repo.Remove(entity); 
         }
