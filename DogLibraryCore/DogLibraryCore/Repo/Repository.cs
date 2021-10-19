@@ -31,9 +31,6 @@ namespace DogLibraryCore
             _repo.Add(entity);
 
         }
-        public void Update(T entity)
-        {
-
-        }
+        
     }
 }

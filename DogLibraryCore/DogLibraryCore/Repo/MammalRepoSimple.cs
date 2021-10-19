@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Linq;
 
 namespace DogLibraryCore
 {
@@ -39,5 +40,9 @@ namespace DogLibraryCore
             return null;
         }
 
+        public IMammal GetMammalByWeight(int findWeight)
+        {
+            return this.Mammals.Where(m => m.Weight == findWeight).FirstOrDefault();
+        }
     }
 }

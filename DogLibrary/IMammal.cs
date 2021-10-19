@@ -1,11 +1,12 @@
-﻿using System;
+﻿using DogLibraryCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
 namespace DogLibrary
 {
-    public interface  IMammal : IAboutable
+    public interface  IMammal : IAboutable, IEntity
     {
         int Age { get; }
         string Name { get; set; }

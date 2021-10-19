@@ -7,6 +7,13 @@ namespace DogLibrary
 {
     public abstract class Mammal : IMammal
     {
+        public int Id
+        {
+            get;
+            protected set;
+
+        }
+
         public int Age
         {
             get;
@@ -31,7 +38,7 @@ namespace DogLibrary
         public int Weight
         {
             get;
-            protected set;
+            set;
             
         }
 

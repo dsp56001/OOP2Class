@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="DogLibraryCore.MammalRepoSimple">
+    <Position X="3.75" Y="1" Width="4.75" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAIAAAABAIAAAAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>Repo\MammalRepoSimple.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DogLibraryCore.EntityBase">
+    <Position X="9.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Repo\IEntity.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="DogLibraryCore.Repository&lt;T&gt;">
+    <Position X="9.5" Y="3.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAAAARAAAAAAAAAAAAAAAAAAAAII=</HashCode>
+      <FileName>Repo\Repository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="DogLibraryCore.Repo.MammalRepo">
+    <Position X="12.5" Y="3.5" Width="4.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIACAAAAAAAAQAAAAACAAAAAAAAAAAAAQAA=</HashCode>
+      <FileName>Repo\MammalRepo.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="DogLibraryCore.IRepository&lt;T&gt;">
+    <Position X="11.5" Y="0.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAII=</HashCode>
+      <FileName>Repo\IRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="DogLibraryCore.IEntity">
+    <Position X="9.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Repo\IEntity.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
