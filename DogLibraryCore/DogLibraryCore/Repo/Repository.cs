@@ -21,12 +21,12 @@ namespace DogLibraryCore
             return _repo;
         }
 
-        public void Add(T entity)
+        public virtual void Add(T entity)
         {
             _repo.Add(entity);
 
         }
-        public void Remove(T entity)
+        public virtual void Remove(T entity)
         {
             _repo.Add(entity);
 

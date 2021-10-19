@@ -16,26 +16,34 @@ namespace DogLibraryCore.Repo
             _repo = new List<IMammal>();
         }
 
-        void IRepository<IMammal>.Add(IMammal entity)
+        public void Add(IMammal entity)
         {
             this._repo.Add(entity);
         }
 
-        IMammal IRepository<IMammal>.GetById(int id)
+        public IMammal GetById(int id)
         {
             return this._repo.Where<IMammal>(m => m.Id == id).FirstOrDefault();
         }
 
-        IEnumerable<IMammal> IRepository<IMammal>.List()
+        public IEnumerable<IMammal> List()
         {
             return this._repo;
         }
 
-        void IRepository<IMammal>.Remove(IMammal entity)
+        void Remove(IMammal entity)
         {
             this._repo.Remove(entity); 
         }
 
-        
+        public IMammal GetMammalByName(string findName)
+        {
+            return this._repo.Where(m => m.Name == findName).FirstOrDefault();
+        }
+
+        public IMammal GetMammalByWeight(int findWeight)
+        {
+            return this._repo.Where(m => m.Weight == findWeight).FirstOrDefault();
+        }
     }
 }
