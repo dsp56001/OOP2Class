@@ -126,10 +126,9 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\DogLibraryDotNet\DogLibraryDotNet\DogLibraryDotNet.csproj">
-      <Project>{e4a127b8-208a-40e4-824f-32433fcc10db}</Project>
+      <Project>{a0afa606-0b50-4a83-a86e-288623913327}</Project>
       <Name>DogLibraryDotNet</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

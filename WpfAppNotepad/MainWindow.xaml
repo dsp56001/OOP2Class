@@ -45,6 +45,7 @@
                             <ComboBoxItem IsSelected="True">12</ComboBoxItem>
                             <ComboBoxItem>14</ComboBoxItem>
                             <ComboBoxItem>16</ComboBoxItem>
+                            <ComboBoxItem>48</ComboBoxItem>
                         </ComboBox>
                     </ToolBar>
                 </ToolBarTray>

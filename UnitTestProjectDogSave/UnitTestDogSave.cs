@@ -96,20 +96,7 @@ namespace UnitTestProjectDogSave
             }
         }
 
-        [TestMethod]
-        public void TestDogRepoGetXM()
-        {
-            //Arrange
-            DogRepo repo = new DogRepo();
-            List<Dog> dogs = repo.Dogs;
-            string defaultXML = Serializer.XmlSerialize<List<Dog>>(dogs);
-            string repoXML;
-            
-            //Act
-            repoXML = repo.GetXML();
-            //Assert
-            Assert.AreEqual(defaultXML, repoXML);
-        }
+        
 
 
 

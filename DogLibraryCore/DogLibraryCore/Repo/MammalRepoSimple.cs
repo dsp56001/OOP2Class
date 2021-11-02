@@ -6,9 +6,11 @@ using System.Linq;
 
 namespace DogLibraryCore
 {
+    
+    //persistance
     public class MammalRepoSimple
     {
-        List<IMammal> Mammals;
+        List<IMammal> Mammals; 
 
         public MammalRepoSimple()
         {
@@ -42,6 +44,7 @@ namespace DogLibraryCore
 
         public IMammal GetMammalByWeight(int findWeight)
         {
+            
             return this.Mammals.Where(m => m.Weight == findWeight).FirstOrDefault();
         }
     }

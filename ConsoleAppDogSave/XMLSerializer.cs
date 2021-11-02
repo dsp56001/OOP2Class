@@ -9,7 +9,7 @@ using System.Xml.Serialization;
 
 namespace ConsoleAppDogSave
 {
-    public static class Serializer
+    public static class XMLSerializer
     {
         public static T XmlDeserialize<T>(this string toDeserialize)
         {

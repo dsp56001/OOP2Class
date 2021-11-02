@@ -6,10 +6,12 @@ using System.Linq;
 
 namespace DogLibraryCore.Repo
 {
-    public class MammalRepo : IRepository<IMammal>
+    public class MammalRepo : IRepository<IMammal>, IEntity
     {
 
         List<IMammal> _repo;
+
+        public int Id => throw new NotImplementedException();
 
         public MammalRepo() : base()
         {

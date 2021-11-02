@@ -44,7 +44,7 @@ namespace ConsoleAppDogSave
             }
         }
 
-        public void FromXML(string xml)
+        public void LoadFromXML(string xml)
         {
             XmlSerializer serializer = new XmlSerializer(Dogs.GetType());
             using (StringReader textReader = new StringReader(xml))

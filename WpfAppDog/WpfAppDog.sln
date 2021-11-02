@@ -1,13 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26730.3
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31729.503
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfAppDog", "WpfAppDog\WpfAppDog.csproj", "{E7038B94-9871-4B53-ABAB-F73A45919EC4}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DogLibraryDotNet", "..\DogLibraryDotNet\DogLibraryDotNet\DogLibraryDotNet.csproj", "{E4A127B8-208A-40E4-824F-32433FCC10DB}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestWpfDog", "UnitTestWpfDog\UnitTestWpfDog.csproj", "{7E6A0400-2CF7-4A5D-8861-B5EA21613EC3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DogLibraryDotNet", "..\DogLibraryDotNet\DogLibraryDotNet\DogLibraryDotNet.csproj", "{A0AFA606-0B50-4A83-A86E-288623913327}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,14 +19,14 @@ Global
 		{E7038B94-9871-4B53-ABAB-F73A45919EC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E7038B94-9871-4B53-ABAB-F73A45919EC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E7038B94-9871-4B53-ABAB-F73A45919EC4}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E4A127B8-208A-40E4-824F-32433FCC10DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E4A127B8-208A-40E4-824F-32433FCC10DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E4A127B8-208A-40E4-824F-32433FCC10DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E4A127B8-208A-40E4-824F-32433FCC10DB}.Release|Any CPU.Build.0 = Release|Any CPU
 		{7E6A0400-2CF7-4A5D-8861-B5EA21613EC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{7E6A0400-2CF7-4A5D-8861-B5EA21613EC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7E6A0400-2CF7-4A5D-8861-B5EA21613EC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7E6A0400-2CF7-4A5D-8861-B5EA21613EC3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0AFA606-0B50-4A83-A86E-288623913327}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0AFA606-0B50-4A83-A86E-288623913327}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0AFA606-0B50-4A83-A86E-288623913327}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0AFA606-0B50-4A83-A86E-288623913327}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
