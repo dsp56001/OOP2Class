@@ -69,7 +69,7 @@ namespace ConsoleAppJSONandXMLDog
 
     public static class XMLSerializer
     {
-        public static T XmlDeserialize<T>(this string toDeserialize)
+        public static T XmlDeserialize<T>(string toDeserialize)
         {
             XmlSerializer xmlSerializer = new XmlSerializer(typeof(T));
             using (StringReader textReader = new StringReader(toDeserialize))
@@ -78,7 +78,7 @@ namespace ConsoleAppJSONandXMLDog
             }
         }
 
-        public static string XmlSerialize<T>(this T toSerialize)
+        public static string XmlSerialize<T>(T toSerialize)
         {
             XmlSerializer xmlSerializer = new XmlSerializer(typeof(T));
             using (StringWriter textWriter = new StringWriter())
