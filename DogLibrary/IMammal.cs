@@ -8,6 +8,7 @@ namespace DogLibrary
 {
     public interface  IMammal : IAboutable
     {
+        int Id { get; }
         int Age { get; }
         string Name { get; set; }
         string Sound { get; }
