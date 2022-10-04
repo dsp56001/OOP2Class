@@ -20,28 +20,7 @@ namespace DogLibraryDotNet
             return base.Bark();
         }
 
-        public async void BarkAsync()
-        {
-            await System.Threading.Tasks.Task.Delay(5000);
-        }
-
-
-
-        public async void BarkTask()
-        {
-            Task taskA = Task.Run(() => Thread.Sleep(2000));
-            Console.WriteLine("taskA Status: {0}", taskA.Status);
-            try
-            {
-                taskA.Wait();
-                Console.WriteLine("taskA Status: {0}", taskA.Status);
-            }
-            catch (AggregateException)
-            {
-                Console.WriteLine("Exception in taskA.");
-            }
-
-        }
+       
     }
 }
 

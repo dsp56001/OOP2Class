@@ -9,7 +9,6 @@ namespace UnitTestProjectDogEvent
     [TestClass]
     public class UnitTestDog
     {
-
         DogEvent dog;
 
         public UnitTestDog()

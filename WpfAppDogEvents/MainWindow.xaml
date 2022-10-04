@@ -17,7 +17,9 @@
                 </TabItem.Header>
                 <StackPanel>
                     <Button x:Name="btnDogBarkSync" Width="100" Click="btnDogBarkSync_Click" >Dog Bark Sync</Button>
-                </StackPanel>
+                        <Button x:Name="btnDogBarkASync" Width="100" Click="btnDogBarkASync_Click" >Dog Bark ASync</Button>
+                        <Button x:Name="btnDogBarkASyncTask" Width="100" Click="btnDogBarkASyncTask_Click" >Dog Bark ASync Task</Button>
+                    </StackPanel>
             </TabItem>
             <TabItem>
                 <TabItem.Header>
@@ -27,7 +29,7 @@
                 </TabItem.Header>
 
                 <StackPanel>
-                    <Button x:Name="btnDogBarkASync" Width="100" Click="btnDogBarkASync_Click" >Dog Bark ASync</Button>
+                        <Button x:Name="btnDogBarkASyncTab" Width="100" Click="btnDogBarkASyncTask_Click" >Dog Bark ASync Task</Button>
                 </StackPanel>
             </TabItem>
         </TabControl>

@@ -48,12 +48,29 @@ namespace WpfAppDogEvents
         private void btnDogBarkSync_Click(object sender, RoutedEventArgs e)
         {
 
-            tbOut.Text += "\n" + dog.Bark() + System.DateTime.Now.ToShortTimeString();
+            tbOut.Text += "\n" + dog.Bark() + " " + System.DateTime.Now.ToLongTimeString();
         }
 
-        private void btnDogBarkASync_Click(object sender, RoutedEventArgs e)
+        private async void btnDogBarkASync_Click(object sender, RoutedEventArgs e)
         {
-            tbOut.Text += "\n" + dog.Bark() + System.DateTime.Now.ToShortTimeString();
+
+            string bark = await DogBarkASync(dog);
+            tbOut.Text += "\n" + bark  + " " + System.DateTime.Now.ToLongTimeString();
+        }
+
+
+        static async Task<string> DogBarkASync(DogLongBark dog)
+        {
+            string bark = await Task.FromResult(dog.Bark());
+            return bark;
+        }
+
+        private async void btnDogBarkASyncTask_Click(object sender, RoutedEventArgs e)
+        {
+            string bark = await Task<String>.Run(() => dog.Bark());
+            tbOut.Text += "\n" + bark + " " + System.DateTime.Now.ToLongTimeString();
+
+
         }
     }
 }
