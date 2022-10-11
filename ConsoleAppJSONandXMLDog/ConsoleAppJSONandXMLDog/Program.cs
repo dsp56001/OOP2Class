@@ -17,6 +17,8 @@ namespace ConsoleAppJSONandXMLDog
 
             string json, xml;
 
+            Console.WriteLine("Oringal Fido Hashcode = " + fido.GetHashCode()); ;
+
             //convert to JSON using Newtonsoft
             json = JsonConvert.SerializeObject(fido, Formatting.Indented);
 
@@ -37,6 +39,9 @@ namespace ConsoleAppJSONandXMLDog
 
             //Json convert back
             var jsonDog = JsonConvert.DeserializeObject<Dog>(json);
+
+            Console.WriteLine("jsonDogo Hashcode = " + jsonDog.GetHashCode());
+
             //Check name need test harness
             Debug.Assert(
                 jsonDog.Name.Equals(fido.Name),

@@ -12,9 +12,9 @@ namespace WebApplicationDICore.Controllers
 
         IWeapon _weapon;
 
-        public WeaponController(IWeapon weapon)
+        public WeaponController()
         {
-            this._weapon = weapon;
+            
         }
 
         public IActionResult Index(IWeapon weapon)

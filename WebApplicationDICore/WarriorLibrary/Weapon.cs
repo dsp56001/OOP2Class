@@ -4,10 +4,10 @@ using System.Text;
 
 namespace DIDemo
 {
-    public abstract class Weapon : IWeapon
+    public class Weapon : IWeapon
     {
         protected string name;
-        public string Name => name;
+        public string Name { get => name; set => name = value; }
 
         public Weapon()
         {

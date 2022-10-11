@@ -2,7 +2,7 @@
 {
     public interface IWeapon
     {
-        string Name { get; }
+        string Name { get; set;  }
         string Hit(string target);
     }
 }
