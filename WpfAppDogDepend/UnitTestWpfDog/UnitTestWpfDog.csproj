@@ -53,8 +53,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="UnitTest1.cs" />
-    <Compile Include="ViewModelDogTests.cs" />
-    <Compile Include="WPFMammalTest.cs" />
+    <Compile Include="ViewModelMammalsTests.cs" />
+    <Compile Include="ViewModelMammalTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

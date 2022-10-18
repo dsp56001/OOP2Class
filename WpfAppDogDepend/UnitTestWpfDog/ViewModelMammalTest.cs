@@ -9,11 +9,11 @@ using WpfAppDog.ViewModels;
 namespace UnitTestWpfDog
 {
     [TestClass]
-    public class WPFMammalTest
+    public class ViewModelMammalTest
     {
         ViewModelMammal wpfMammal;
 
-        public WPFMammalTest()
+        public ViewModelMammalTest()
         {
             wpfMammal = new ViewModelMammal(new Dog());
         }
@@ -78,9 +78,10 @@ namespace UnitTestWpfDog
         {
             //Arrange
             ViewModelMammals vm;
-            
+
 
             //Act 
+            vm = new ViewModelMammals();
             
 
 
