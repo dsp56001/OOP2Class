@@ -12,9 +12,9 @@ namespace WpfAppDog.ViewModels
     public class ViewModelMammals
     {
 
-        private static ObservableCollection<WPFMammal> mammals;
+        private static ObservableCollection<ViewModelMammal> mammals;
 
-        public ObservableCollection<WPFMammal> Mammals
+        public ObservableCollection<ViewModelMammal> Mammals
         {
             get { return mammals; }
             set { mammals = value; }
@@ -24,12 +24,12 @@ namespace WpfAppDog.ViewModels
         {
             if (mammals == null)
             {
-                mammals = new ObservableCollection<WPFMammal>()
+                mammals = new ObservableCollection<ViewModelMammal>()
                 {
-                    new WPFMammal ( new Dog{ BarkSound="woof!", Name="fido"}),
-                    new WPFMammal ( new Dog{ BarkSound="arf!", Name="rover"}),
-                    new WPFMammal ( new Dog{ BarkSound="arf!", Name="rover"}),
-                    new WPFMammal ( new Dog{ BarkSound="arf!", Name="rover"})
+                    new ViewModelMammal ( new Dog{ BarkSound="woof!", Name="fido"}),
+                    new ViewModelMammal ( new Dog{ BarkSound="arf!", Name="rover"}),
+                    new ViewModelMammal ( new Dog{ BarkSound="arf!", Name="rover"}),
+                    new ViewModelMammal ( new Dog{ BarkSound="arf!", Name="rover"})
                 };
             }
 

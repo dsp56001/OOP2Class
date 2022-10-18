@@ -11,11 +11,11 @@ namespace UnitTestWpfDog
     [TestClass]
     public class WPFMammalTest
     {
-        WPFMammal wpfMammal;
+        ViewModelMammal wpfMammal;
 
         public WPFMammalTest()
         {
-            wpfMammal = new WPFMammal(new Dog());
+            wpfMammal = new ViewModelMammal(new Dog());
         }
 
         [TestMethod]
@@ -44,12 +44,12 @@ namespace UnitTestWpfDog
         {
             //Arrange
 
-            WPFMammal vm;
+            ViewModelMammal vm;
             IMammal dog;
 
             //Act 
             dog = new Dog();
-            vm = new WPFMammal(dog);
+            vm = new ViewModelMammal(dog);
 
             string dogNamePrev = dog.Name;
             string vmNamePres = vm.Name;

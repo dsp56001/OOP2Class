@@ -20,9 +20,9 @@ namespace WpfAppDog
     /// <summary>
     /// Interaction logic for WpfDog.xaml
     /// </summary>
-    public partial class WpfDog : Window
+    public partial class WpfMammal : Window
     {
-        public WpfDog()
+        public WpfMammal()
         {
             InitializeComponent();
         }

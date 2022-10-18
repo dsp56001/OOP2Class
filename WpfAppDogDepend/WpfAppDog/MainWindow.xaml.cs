@@ -30,7 +30,7 @@ namespace WpfAppDog
 
         private void Dog_Button_Click(object sender, RoutedEventArgs e)
         {
-            WpfDog dogWin = new WpfDog();
+            WpfMammal dogWin = new WpfMammal();
             dogWin.Show();
         }
 

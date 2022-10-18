@@ -11,7 +11,7 @@ using System.Windows.Input;
 
 namespace WpfAppDog.Models
 {
-    public class WPFMammal : BaseViewModel
+    public class ViewModelMammal : BaseViewModel
     {
         IMammal mammal; //conatining base object POCO
 
@@ -20,7 +20,7 @@ namespace WpfAppDog.Models
 
 
 
-        public WPFMammal(IMammal mammal)
+        public ViewModelMammal(IMammal mammal)
         {
             this.mammal = mammal;
             this.HappyBirthday = new WPFMammalCommand(ExecuteCommandHappyBirthday, CanExecuteCommandHappyBirthday);
