@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -11,28 +12,31 @@ namespace WpfAppDog
 {
     public abstract class BaseViewModel : DependencyObject, INotifyPropertyChanged
     {
+        //Implement INothify property changes c# 6 way
         public event PropertyChangedEventHandler PropertyChanged = (sender, e) => { };
 
-        protected virtual void RaisePropertyChangedEvent(string propertyName)
+        protected void RaisePropertyChangedEvent([CallerMemberName] string propertyName = null)
         {
-            PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
 
     public class BasicCommand : ICommand
     {
         private Action commandAction;
+        private bool canExecute;
 
         public event EventHandler CanExecuteChanged = (sender, e) => { };
 
         public BasicCommand(Action action)
         {
             commandAction = action;
+            canExecute = true;
         }
 
         public bool CanExecute(object parameter)
         {
-            return true;
+            return  canExecute; //probably should't always return true but for now allow all ICommands to execute
         }
 
         public void Execute(object parameter)
