@@ -15,10 +15,7 @@ namespace WpfAppDog.Models
     {
         IMammal mammal; //conatining base object POCO
 
-
         public ICommand HappyBirthday { get; set; }
-
-
 
         public ViewModelMammal(IMammal mammal)
         {
@@ -38,16 +35,12 @@ namespace WpfAppDog.Models
         }
 
 
-
         public int Age
         {
             get
             {
                 return mammal.Age;
             }
-
-
-
         }
 
         public string Name
@@ -64,9 +57,7 @@ namespace WpfAppDog.Models
                     //OLD way
                     //RaisePropertyChanged("Name");
                     //New way PropertyName is optional
-                    RaisePropertyChangedEvent("Name") ;
-
-                    
+                    RaisePropertyChangedEvent("Name");
                 }
             }
         }
@@ -84,7 +75,6 @@ namespace WpfAppDog.Models
         {
             get { return mammal.About(); }
         }
-
         
     }
 

@@ -10,8 +10,8 @@
     <Grid>
         <StackPanel>
             <views:MammalView x:Name="MammalView1" Loaded="MammalViewControl_Loaded"/>
-            <StackPanel>            
-                
+            <StackPanel>
+                <Button x:Name="btnNext" Click="btnNext_Click" >Next</Button>
             </StackPanel>
         </StackPanel>
     </Grid>

@@ -22,23 +22,38 @@ namespace WpfAppDog
     /// </summary>
     public partial class WpfMammal : Window
     {
+
+        int mammalIndex;
+        ViewModelMammals viewControl;
+
+
         public WpfMammal()
         {
             InitializeComponent();
+            mammalIndex = 0;
         }
 
         private void MammalViewControl_Loaded(object sender, RoutedEventArgs e)
         {
-            ViewModelMammals viewControl = new WpfAppDog.ViewModels.ViewModelMammals();
+            viewControl = new WpfAppDog.ViewModels.ViewModelMammals();
             viewControl.LoadMammals();
-
-
-            this.DataContext = viewControl.Mammals[0];
-            MammalView1.DataContext = viewControl.Mammals[0];
-
+            UpdateDataContext();
 
         }
 
-        
+        private void UpdateDataContext()
+        {
+            this.DataContext = viewControl.Mammals[mammalIndex];
+            MammalView1.DataContext = viewControl.Mammals[mammalIndex];
+        }
+
+        private void btnNext_Click(object sender, RoutedEventArgs e)
+        {
+            if (mammalIndex < viewControl.Mammals.Count -1)
+            { mammalIndex++; }
+            else
+            { mammalIndex = 0; }
+            UpdateDataContext();
+        }
     }
 }
